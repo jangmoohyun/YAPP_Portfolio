@@ -1,0 +1,2069 @@
+.deck {
+  flex: 1;
+  min-height: 0;
+  height: 100%;
+  max-height: calc(100dvh - var(--nav-height));
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr) auto auto;
+  color: #fff;
+  overflow: hidden;
+}
+
+.haru {
+  background:
+    radial-gradient(900px 420px at 90% 10%, rgba(255, 233, 123, 0.18), transparent 55%),
+    linear-gradient(160deg, #4f6430 0%, #62763a 45%, #3f5228 100%);
+}
+
+/* 하루한번 전체: 앱 크림 톤 + 장식 에셋 */
+.haruCream {
+  position: relative;
+  background:
+    radial-gradient(720px 420px at 12% 8%, rgba(167, 201, 150, 0.22), transparent 55%),
+    radial-gradient(640px 380px at 88% 78%, rgba(255, 214, 170, 0.2), transparent 50%),
+    #fdfbf0;
+  color: #1f3a24;
+}
+
+.haruCream .topBar,
+.haruCream .stage,
+.haruCream .controls,
+.haruCream .projectNav {
+  position: relative;
+  z-index: 2;
+}
+
+.haruOnTitle .stage {
+  padding: 0;
+}
+
+.haruCream .back,
+.haruCream .progress,
+.haruCream .navBtn,
+.haruCream .projectNav a {
+  color: #1f3a24;
+}
+
+.haruCream .navBtn {
+  border-color: rgba(58, 106, 63, 0.28);
+  background: rgba(58, 106, 63, 0.06);
+}
+
+.haruCream .navBtn:not(:disabled):hover {
+  background: rgba(58, 106, 63, 0.12);
+}
+
+.haruCream .dot {
+  background: rgba(58, 106, 63, 0.28);
+}
+
+.haruCream .dotActive {
+  background: #3a6a3f;
+}
+
+.haruCream .eyebrow,
+.haruCream .section {
+  color: #2a4d30;
+}
+
+.haruCream .contentSlide h2,
+.haruCream .titleSlide h1 {
+  color: #16301c;
+}
+
+.haruCream .subtitle,
+.haruCream .lead {
+  color: #1f3a24;
+}
+
+.haruCream .points li {
+  color: #1a3320;
+}
+
+.haruCream .points li::before {
+  background: #1f3a24;
+}
+
+.haruCream .card {
+  background: rgba(255, 255, 255, 0.72);
+  border-color: rgba(31, 58, 36, 0.22);
+}
+
+.haruCream .card h3 {
+  color: #16301c;
+}
+
+.haruCream .card p {
+  color: #243f2a;
+}
+
+.haruCream .metaList li {
+  background: rgba(31, 58, 36, 0.12);
+  color: #1f3a24;
+}
+
+.haruCream .shot figcaption {
+  color: #1f3a24;
+}
+
+.haruCream .shot img {
+  border-color: rgba(58, 106, 63, 0.14);
+  box-shadow: 0 14px 32px rgba(58, 106, 63, 0.12);
+}
+
+.haruCream .reflection {
+  background: rgba(255, 255, 255, 0.72);
+  border-left-color: #1f3a24;
+  color: #1a3320;
+}
+
+.haruCream .timelineItem {
+  background: rgba(255, 255, 255, 0.72);
+  border-color: rgba(31, 58, 36, 0.22);
+}
+
+.haruCream .timelineItem strong {
+  color: #16301c;
+}
+
+.haruCream .timelineItem p,
+.haruCream .timelineHead {
+  color: #243f2a;
+}
+
+/* 중간발표 톤: 제목·요소를 크고 꽉 차게 */
+.haruCream .stage {
+  padding: clamp(0.75rem, 2vh, 1.5rem) clamp(2rem, 5vw, 4rem);
+}
+
+.haruCream.haruOnTitle .stage {
+  padding: 0;
+}
+
+.haruCream .section {
+  margin-bottom: clamp(0.5rem, 1.6vh, 1rem);
+  font-size: clamp(1.1rem, min(2.4vw, 3.4vh), 1.85rem);
+  letter-spacing: 0.08em;
+  font-weight: 800;
+}
+
+.haruCream .contentSlide h2 {
+  font-size: clamp(2rem, min(5.5vw, 7vh), 4.25rem);
+  max-width: min(22ch, 100%);
+  letter-spacing: -0.03em;
+  line-height: 1.12;
+}
+
+.haruCream .contentSlide h2.titleBreak {
+  max-width: min(34ch, 100%);
+  white-space: pre-line;
+  word-break: keep-all;
+  overflow-wrap: normal;
+}
+
+.haruCream .lead.titleBreak {
+  max-width: none;
+  width: max-content;
+  max-width: min(100%, 72rem);
+  white-space: pre-line;
+  word-break: keep-all;
+  overflow-wrap: normal;
+}
+
+.haruCream .contentWithPhone .titleBreak {
+  max-width: 100%;
+  padding-left: clamp(0.75rem, 2.5vw, 2rem);
+}
+
+.haruCream .contentWithPhone .section {
+  padding-left: clamp(0.75rem, 2.5vw, 2rem);
+}
+
+.haruCream .contentWithPhone .points {
+  padding-left: clamp(0.75rem, 2.5vw, 2rem);
+}
+
+.haruCream .lead {
+  margin-top: clamp(0.5rem, 1.6vh, 1rem);
+  font-size: clamp(1rem, min(2vw, 2.8vh), 1.45rem);
+  max-width: min(46rem, 100%);
+  line-height: 1.5;
+}
+
+.haruCream .lead,
+.haruCream .points li,
+.haruCream .card h3,
+.haruCream .card p,
+.haruCream .structureCard p {
+  word-break: keep-all;
+  overflow-wrap: break-word;
+}
+
+.haruCream .points {
+  gap: clamp(0.6rem, 1.6vh, 1rem);
+  margin-top: clamp(0.75rem, 2.2vh, 1.5rem);
+  max-width: min(58rem, 100%);
+}
+
+.haruCream .points li {
+  padding-left: 1.5rem;
+  font-size: clamp(1.15rem, min(2.2vw, 3.1vh), 1.75rem);
+  line-height: 1.45;
+  font-weight: 600;
+}
+
+.haruCream .points li::before {
+  top: 0.7rem;
+  width: 0.55rem;
+  height: 0.55rem;
+}
+
+.haruCream .cardGrid {
+  gap: clamp(0.7rem, 1.8vh, 1.1rem);
+  margin-top: clamp(0.85rem, 2.6vh, 1.75rem);
+  flex: 1;
+  align-content: stretch;
+}
+
+.haruCream .featureGuide {
+  justify-content: flex-start;
+  gap: 0.85rem;
+  padding-top: clamp(0.15rem, 1vh, 0.6rem);
+}
+
+.haruCream .featureGuideHead h2 {
+  max-width: min(24ch, 100%);
+}
+
+.haruCream .featurePanel {
+  background: rgba(255, 255, 255, 0.55);
+  border: 1px solid rgba(98, 118, 58, 0.12);
+}
+
+.haruCream .featureDesc h3 {
+  background: #3f4f2e;
+  color: #fff;
+}
+
+.haruCream .featureDesc li strong {
+  color: #2b2016;
+}
+
+.haruCream .featureDesc li span {
+  color: #4a4338;
+}
+
+.haruCream .featureNote {
+  color: #5a554c;
+}
+
+.haruCream .contentSlide {
+  justify-content: center;
+  gap: 0.25rem;
+}
+
+.haruCream .contentPinned {
+  justify-content: flex-start;
+  gap: 0;
+  padding-top: clamp(0.15rem, 1vh, 0.75rem);
+}
+
+.haruCream .contentPinnedHead .section {
+  padding-left: clamp(0.75rem, 2.5vw, 2rem);
+}
+
+.haruCream .contentPinnedHead .titleBreak {
+  max-width: min(28ch, 100%);
+  padding-left: clamp(0.75rem, 2.5vw, 2rem);
+  word-break: keep-all;
+  overflow-wrap: normal;
+}
+
+.haruCream .contentPinnedHead .lead.titleBreak {
+  width: auto;
+  max-width: min(100%, 64rem);
+}
+
+.haruCream .contentPinnedBody {
+  padding-left: clamp(2.5rem, 8vw, 6rem);
+}
+
+.haruCream .contentPinnedBody .points {
+  max-width: min(48rem, 100%);
+  gap: clamp(0.8rem, 2.4vh, 1.55rem);
+}
+
+.haruCream .roleLead {
+  margin-top: 0.75rem;
+  max-width: min(40rem, 100%);
+  padding-left: clamp(2rem, 5.5vw, 4rem);
+  font-size: clamp(1.05rem, 1.8vw, 1.3rem);
+}
+
+.haruCream .roleCards {
+  flex: 1 1 auto;
+  min-height: 0;
+  margin-top: 0;
+  margin-inline: clamp(1.5rem, 4.5vw, 3.5rem);
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: clamp(0.85rem, 1.8vw, 1.25rem);
+  align-content: center;
+  padding-bottom: clamp(0.5rem, 2vh, 1.5rem);
+}
+
+.haruCream .roleCards .card {
+  grid-column: span 2;
+  min-height: clamp(120px, 18vh, 168px);
+}
+
+/* 아래 2장: 위와 동일 폭, 위 카드 사이 중심에 배치 */
+.haruCream .roleCards .card:nth-child(4) {
+  grid-column: 2 / span 2;
+}
+
+.haruCream .roleCards .card:nth-child(5) {
+  grid-column: 4 / span 2;
+}
+
+@media (max-width: 900px) {
+  .haruCream .roleCards {
+    grid-template-columns: 1fr 1fr;
+    margin-inline: 0;
+  }
+
+  .haruCream .roleCards .card,
+  .haruCream .roleCards .card:nth-child(4),
+  .haruCream .roleCards .card:nth-child(5) {
+    grid-column: span 1;
+  }
+}
+
+.haruCream .card {
+  padding: clamp(0.9rem, 2.4vh, 1.4rem) 1.5rem;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: clamp(96px, 17vh, 220px);
+}
+
+.haruCream .card h3 {
+  margin-bottom: clamp(0.3rem, 1vh, 0.55rem);
+  font-size: clamp(1.1rem, min(2.2vw, 3.1vh), 1.7rem);
+  font-weight: 800;
+}
+
+.haruCream .card p {
+  font-size: clamp(0.92rem, min(1.6vw, 2.4vh), 1.25rem);
+  line-height: 1.45;
+}
+
+.haruCream .gallery {
+  gap: clamp(1rem, 2.5vw, 1.75rem);
+  margin-top: 1.25rem;
+}
+
+.haruCream .shot img {
+  max-height: min(64vh, 580px);
+  border-radius: 20px;
+}
+
+.haruCream .shot figcaption {
+  font-size: clamp(0.95rem, 1.4vw, 1.15rem);
+}
+
+.haruTitleSlide {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  overflow: hidden;
+}
+
+.haruBranchLayer {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.haruCream > .haruBranchLayer {
+  z-index: 0;
+}
+
+.haruEdgeBranch {
+  position: absolute;
+  width: auto;
+  max-width: none;
+  opacity: 0.86;
+  object-fit: contain;
+  object-position: left center;
+}
+
+/* 화면 가장자리에 붙여 안쪽으로 자라나게 — PNG 여백만큼만 살짝 바깥으로 */
+.haruL1 {
+  top: -4%;
+  left: 0;
+  height: 36%;
+  transform: translateX(-6%) rotate(14deg);
+  transform-origin: bottom left;
+}
+
+.haruL2 {
+  top: 24%;
+  left: 0;
+  height: 23%;
+  transform: translateX(-2%) rotate(-5deg);
+  transform-origin: center left;
+  opacity: 0.74;
+}
+
+.haruL3 {
+  top: 42%;
+  left: 0;
+  height: 32%;
+  transform: translateX(-8%) rotate(10deg);
+  transform-origin: bottom left;
+}
+
+.haruL4 {
+  bottom: 0;
+  left: 0;
+  height: 28%;
+  transform: translateX(-4%) rotate(7deg);
+  transform-origin: top left;
+  opacity: 0.72;
+}
+
+.haruR1 {
+  top: 2%;
+  right: 0;
+  height: 34%;
+  transform: translateX(6%) rotate(-12deg);
+  transform-origin: bottom right;
+  object-position: right center;
+}
+
+.haruR2 {
+  top: 36%;
+  right: 0;
+  height: 22%;
+  transform: translateX(10%) rotate(3deg);
+  transform-origin: center right;
+  opacity: 0.7;
+  object-position: right center;
+}
+
+.haruR3 {
+  bottom: 0;
+  right: 0;
+  height: 38%;
+  transform: translateX(5%) rotate(-8deg);
+  transform-origin: top right;
+  object-position: right center;
+}
+
+.haruFloat {
+  position: absolute;
+  pointer-events: none;
+  z-index: 1;
+  object-fit: contain;
+}
+
+.haruSun {
+  top: 6%;
+  left: 12%;
+  width: clamp(48px, 6vw, 78px);
+  opacity: 0.9;
+  animation: haruDrift 7s ease-in-out infinite;
+}
+
+.haruCloud {
+  top: 7%;
+  right: 12%;
+  width: clamp(64px, 8vw, 110px);
+  opacity: 0.62;
+  animation: haruDrift 9s ease-in-out infinite 0.6s;
+}
+
+.haruHeartA {
+  bottom: 14%;
+  left: 18%;
+  width: clamp(24px, 3vw, 38px);
+  opacity: 0.82;
+  animation: haruLetterFloat 5s ease-in-out infinite;
+}
+
+.haruHeartB {
+  bottom: 10%;
+  left: 36%;
+  width: clamp(18px, 2.4vw, 30px);
+  opacity: 0.72;
+  animation: haruLetterFloat 4.4s ease-in-out infinite 0.7s;
+}
+
+.haruHeartC {
+  bottom: 16%;
+  left: 52%;
+  width: clamp(26px, 3.2vw, 40px);
+  opacity: 0.78;
+  animation: haruLetterFloat 5.6s ease-in-out infinite 1s;
+}
+
+.haruHeartD {
+  bottom: 12%;
+  right: 28%;
+  width: 22px;
+  opacity: 0.68;
+  animation: haruLetterFloat 3.8s ease-in-out infinite 0.3s;
+}
+
+.haruHeartE {
+  bottom: 18%;
+  right: 14%;
+  width: 20px;
+  opacity: 0.58;
+  animation: haruLetterFloat 6s ease-in-out infinite 1.4s;
+}
+
+@keyframes haruDrift {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(6px, -10px);
+  }
+}
+
+.haruTitleMain {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(3.5rem, 8vw, 6.5rem);
+  max-width: 1280px;
+  margin-inline: auto;
+  width: 100%;
+  padding: clamp(2rem, 5vh, 3.5rem) clamp(3rem, 6vw, 5rem);
+}
+
+.titleBreak {
+  white-space: pre-line;
+}
+
+.contentPinned {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 0;
+}
+
+.contentPinnedHead {
+  flex: 0 0 auto;
+}
+
+.contentPinnedHead h2 {
+  margin: 0;
+}
+
+.contentPinnedBody {
+  flex: 1 1 auto;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: clamp(1rem, 3vh, 1.75rem);
+  padding-left: clamp(1.5rem, 5vw, 4rem);
+  padding-top: 0;
+  padding-bottom: clamp(0.5rem, 2vh, 1.5rem);
+}
+
+.contentPinnedBody .lead {
+  margin-top: 0;
+}
+
+.contentPinnedBody .pinnedCards {
+  flex: 0 0 auto;
+  width: 100%;
+  margin-inline: 0;
+}
+
+.contentPinnedBody .points {
+  margin-top: 0;
+}
+
+.contentPinned .contentWithPhone {
+  flex: 1 1 auto;
+  min-height: 0;
+  width: 100%;
+  align-items: center;
+  align-content: center;
+  padding-top: 0;
+  padding-bottom: clamp(0.5rem, 2vh, 1.5rem);
+}
+
+.contentPinned .contentWithPhone:has(.phoneFrame) {
+  grid-template-columns: minmax(0, 1.05fr) minmax(200px, 270px) minmax(2rem, 10vw);
+  gap: clamp(0.6rem, 1.8vw, 1.25rem);
+}
+
+.contentPinned .contentCopy .points {
+  margin-top: 0;
+  margin-left: clamp(1.5rem, 4.5vw, 3.5rem);
+  gap: 1.45rem;
+}
+
+.contentPinned .phoneFrame {
+  justify-self: start;
+  margin-left: 0;
+  width: min(100%, 270px);
+  transform: translate(
+    calc(-1 * clamp(0.75rem, 3.5vw, 2.75rem)),
+    calc(-1 * clamp(4.5rem, 13vh, 8.5rem))
+  );
+}
+
+.contentPinned .phoneBezel {
+  max-height: min(62vh, 560px);
+}
+
+.contentWithPhone {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1.2fr) minmax(220px, 300px);
+  gap: clamp(1rem, 2.5vw, 2rem);
+  align-items: center;
+  justify-content: stretch;
+}
+
+.contentWithPhone:has(.weekGap) {
+  grid-template-columns: minmax(0, 0.85fr) minmax(340px, 460px);
+}
+
+.contentPinned .contentWithPhone:has(.weekGap) {
+  padding-top: 0;
+  align-items: center;
+}
+
+.contentPinned .contentWithPhone:has(.weekGap) .points {
+  margin-top: 0;
+}
+
+.weekGap {
+  justify-self: end;
+  width: min(100%, 460px);
+  display: grid;
+  gap: 0.9rem;
+}
+
+.weekGapDays {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 0.4rem;
+}
+
+.weekGapDay {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  min-height: clamp(5.75rem, 12vh, 7.25rem);
+  padding: 0.55rem 0.35rem 0.6rem;
+  border-radius: 14px;
+  border: 2px dashed rgba(43, 32, 22, 0.2);
+  background: transparent;
+  color: rgba(43, 32, 22, 0.5);
+}
+
+.weekGapDayActive {
+  border: none;
+  background: #62763a;
+  color: #fff;
+  box-shadow: 0 10px 22px rgba(98, 118, 58, 0.28);
+}
+
+.weekGapDayName {
+  font-size: clamp(0.9rem, 1.4vw, 1.05rem);
+  font-weight: 800;
+  line-height: 1;
+}
+
+.weekGapDayLabel {
+  font-size: clamp(0.68rem, 1.05vw, 0.78rem);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  word-break: keep-all;
+}
+
+.weekGapInsights {
+  display: grid;
+  gap: 0.55rem;
+}
+
+.weekGapInsight {
+  margin: 0;
+  padding: 0.7rem 0.85rem;
+  border-radius: 14px;
+  background: #fff;
+  box-shadow: 0 4px 14px rgba(43, 32, 22, 0.06);
+}
+
+.weekGapInsight h3 {
+  margin: 0 0 0.25rem;
+  font-size: clamp(0.88rem, 1.3vw, 1rem);
+  font-weight: 800;
+  color: #62763a;
+  letter-spacing: -0.01em;
+}
+
+.weekGapInsight p {
+  margin: 0;
+  font-size: clamp(0.88rem, 1.25vw, 1rem);
+  font-weight: 600;
+  line-height: 1.35;
+  color: #2b2016;
+  word-break: keep-all;
+}
+
+.contentWithPhone .titleBreak {
+  word-break: keep-all;
+  overflow-wrap: normal;
+}
+
+.featureGuide {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  min-height: 0;
+}
+
+.featureGuideHead {
+  flex: 0 0 auto;
+}
+
+.featureGuideHead h2 {
+  margin: 0;
+}
+
+.featureGuideGrid {
+  flex: 1 1 auto;
+  min-height: 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(0.75rem, 2vw, 1.35rem);
+  align-items: stretch;
+}
+
+.featurePanel {
+  display: grid;
+  grid-template-columns: minmax(120px, 0.9fr) minmax(0, 1.15fr);
+  gap: clamp(0.55rem, 1.4vw, 0.9rem);
+  align-items: center;
+  padding: clamp(0.55rem, 1.4vw, 0.85rem);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.5);
+  min-height: 0;
+}
+
+.featurePhone {
+  margin: 0;
+  width: min(100%, 220px, calc((100dvh - 430px) * 9 / 19.2));
+  min-width: 120px;
+  justify-self: center;
+}
+
+.featurePhone .phoneBezel {
+  max-height: min(58vh, 520px);
+  border-radius: 28px;
+  padding: 8px;
+}
+
+.featurePhone .phoneBezel img {
+  border-radius: 22px;
+}
+
+.featurePhone .phoneNotch {
+  top: 10px;
+  height: 14px;
+  width: 32%;
+}
+
+.featureDesc {
+  min-width: 0;
+  display: grid;
+  gap: 0.7rem;
+  align-content: start;
+}
+
+.featureDesc h3 {
+  margin: 0;
+  padding: 0.55rem 0.75rem;
+  border-radius: 10px;
+  background: #3f4f2e;
+  color: #fff;
+  font-size: clamp(0.95rem, 1.5vw, 1.15rem);
+  font-weight: 800;
+  line-height: 1.25;
+  word-break: keep-all;
+}
+
+.featureDesc ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 0.7rem;
+}
+
+.featureDesc li {
+  display: grid;
+  gap: 0.2rem;
+}
+
+.featureDesc li strong {
+  font-size: clamp(0.95rem, 1.45vw, 1.12rem);
+  font-weight: 800;
+  line-height: 1.3;
+  word-break: keep-all;
+}
+
+.featureDesc li span {
+  font-size: clamp(0.88rem, 1.3vw, 1.02rem);
+  font-weight: 600;
+  line-height: 1.4;
+  word-break: keep-all;
+}
+
+.featureNote {
+  margin: 0.15rem 0 0;
+  font-size: clamp(0.82rem, 1.2vw, 0.95rem);
+  font-weight: 600;
+  line-height: 1.4;
+  word-break: keep-all;
+}
+
+@media (max-width: 1100px) {
+  .featureGuideGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .featurePanel {
+    grid-template-columns: minmax(110px, 160px) minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 700px) {
+  .featurePanel {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+
+  .featureDesc {
+    width: 100%;
+  }
+}
+
+.contentCopy {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.phoneFrame {
+  margin: 0;
+  justify-self: start;
+  margin-left: clamp(0rem, 1vw, 0.5rem);
+  width: min(100%, 300px);
+  display: grid;
+  gap: 0.65rem;
+  justify-items: center;
+}
+
+.phoneBezel {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 9 / 19.2;
+  max-height: min(68vh, 620px);
+  padding: 10px;
+  border-radius: 36px;
+  background: linear-gradient(160deg, #2a2a2e 0%, #111 55%, #1a1a1c 100%);
+  box-shadow:
+    0 28px 56px rgba(31, 58, 36, 0.22),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.12);
+  overflow: hidden;
+}
+
+.phoneNotch {
+  position: absolute;
+  top: 14px;
+  left: 50%;
+  z-index: 2;
+  width: 34%;
+  height: 18px;
+  transform: translateX(-50%);
+  border-radius: 999px;
+  background: #0a0a0a;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.06);
+}
+
+.phoneBezel img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  border-radius: 28px;
+  display: block;
+  background: #fdfbf0;
+}
+
+.phoneFrame figcaption {
+  font-size: clamp(0.95rem, 1.4vw, 1.1rem);
+  font-weight: 800;
+  color: #1f3a24;
+}
+
+.haruCream .phoneFrame figcaption {
+  color: #1f3a24;
+}
+
+@media (max-width: 900px) {
+  .contentWithPhone {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+
+  .contentWithPhone:has(.weekGap) {
+    grid-template-columns: 1fr;
+  }
+
+  .phoneFrame {
+    order: -1;
+    width: min(52vw, 220px);
+  }
+
+  .phoneBezel {
+    max-height: min(42vh, 360px);
+  }
+
+  .weekGap {
+    justify-self: stretch;
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .weekGapDay {
+    min-height: 4rem;
+  }
+}
+
+.haruTitleCopy {
+  display: grid;
+  justify-items: start;
+  gap: 1rem;
+  flex: 0 1 auto;
+}
+
+.haruTitleCopy h1 {
+  margin: 0;
+  font-size: clamp(4.5rem, 11vw, 7.5rem);
+  font-weight: 800;
+  line-height: 0.98;
+  letter-spacing: -0.05em;
+  color: #16301c;
+  max-width: none;
+}
+
+.haruTitleHeart {
+  width: 40px;
+  height: 40px;
+  margin-top: -0.1rem;
+}
+
+.haruSubtitle {
+  margin: 0.55rem 0 0;
+  max-width: 12em;
+  font-size: clamp(1.45rem, 3vw, 2.15rem);
+  font-weight: 700;
+  line-height: 1.35;
+  color: #1f3a24;
+  letter-spacing: -0.02em;
+}
+
+.haruTagline {
+  margin: 0.35rem 0 0;
+  padding: 0.5rem 1.1rem;
+  border-radius: 999px;
+  background: rgba(31, 58, 36, 0.12);
+  border: 1px solid rgba(31, 58, 36, 0.28);
+  color: #16301c;
+  font-size: clamp(1.05rem, 1.8vw, 1.3rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.haruLoadingLetter {
+  margin: 0;
+  flex: 0 0 auto;
+  width: min(46vw, 480px);
+  filter: drop-shadow(0 22px 40px rgba(58, 106, 63, 0.16));
+}
+
+.haruLoadingLetter img {
+  width: 100%;
+  height: auto;
+  display: block;
+  animation: haruLetterFloat 3s ease-in-out infinite;
+}
+
+@keyframes haruLetterFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+@media (max-width: 900px) {
+  .haruTitleMain {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 0.5rem clamp(2.5rem, 8vw, 4rem);
+    gap: 1rem;
+  }
+
+  .haruTitleCopy {
+    justify-items: center;
+    order: 1;
+  }
+
+  .haruLoadingLetter {
+    width: min(58vw, 280px);
+    order: 0;
+  }
+
+  .haruEdgeBranch {
+    opacity: 0.55;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .haruLoadingLetter img {
+    animation: none;
+  }
+}
+
+.console {
+  background:
+    radial-gradient(800px 400px at 85% 0%, rgba(0, 153, 255, 0.22), transparent 50%),
+    linear-gradient(160deg, #0b1016 0%, #151c26 55%, #0f1620 100%);
+}
+
+/* Remote Console: 하루한번과 같은 라이트 덱 배치, 쿨 톤만 오버라이드 */
+.consoleLight {
+  background:
+    radial-gradient(720px 420px at 12% 8%, rgba(0, 153, 255, 0.1), transparent 55%),
+    radial-gradient(640px 380px at 88% 78%, rgba(120, 160, 200, 0.12), transparent 50%),
+    #f3f6fa;
+  color: #152033;
+}
+
+.consoleLight .back,
+.consoleLight .progress,
+.consoleLight .navBtn,
+.consoleLight .projectNav a {
+  color: #152033;
+}
+
+.consoleLight .navBtn {
+  border-color: rgba(21, 32, 51, 0.18);
+  background: rgba(0, 153, 255, 0.06);
+}
+
+.consoleLight .navBtn:not(:disabled):hover {
+  background: rgba(0, 153, 255, 0.12);
+}
+
+.consoleLight .dot {
+  background: rgba(21, 32, 51, 0.2);
+}
+
+.consoleLight .dotActive {
+  background: #0080d6;
+}
+
+.consoleLight .eyebrow,
+.consoleLight .section {
+  color: #0080d6;
+}
+
+.consoleLight .contentSlide h2,
+.consoleLight .titleSlide h1,
+.consoleLight .contentPinnedHead .titleBreak {
+  color: #152033;
+  max-width: min(42ch, 100%);
+  white-space: nowrap;
+}
+
+.consoleLight .contentWithBrowser {
+  grid-template-columns: minmax(0, 0.9fr) minmax(420px, 1.35fr) !important;
+}
+
+.consoleLight .contentWithBrowser {
+  grid-template-columns: minmax(0, 1.15fr) minmax(280px, 0.95fr) !important;
+}
+
+.consoleLight .contentWithBrowser .browserFrame {
+  width: min(100%, 420px);
+  max-width: 420px;
+  justify-self: center;
+  max-height: min(52vh, 440px);
+}
+
+.consoleLight .contentWithBrowser .browserScreenImage {
+  background: #eef4fb;
+}
+
+.consoleLight .contentWithBrowser .browserScreenImage > img {
+  object-fit: contain;
+  object-position: center;
+}
+
+.consoleLight .contentWithBrowser .contentCopy .points,
+.consoleLight .contentWithStructure .contentCopy .points {
+  max-width: none;
+  margin-left: 0;
+}
+
+.consoleLight .contentWithBrowser .points li,
+.consoleLight .contentWithStructure .points li {
+  white-space: nowrap;
+  font-size: clamp(1.15rem, min(2.15vw, 3.1vh), 1.7rem);
+}
+
+.consoleLight .contentPinnedBody .points {
+  max-width: min(72rem, 100%);
+}
+
+.consoleLight .contentPinnedBody .points li {
+  white-space: nowrap;
+  font-size: clamp(1.15rem, min(2.1vw, 3vh), 1.65rem);
+}
+
+@media (max-width: 1200px) {
+  .consoleLight .contentPinnedHead .titleBreak,
+  .consoleLight .contentWithBrowser .points li,
+  .consoleLight .contentWithStructure .points li,
+  .consoleLight .contentPinnedBody .points li {
+    white-space: normal;
+  }
+}
+
+.consoleLight .subtitle,
+.consoleLight .lead,
+.consoleLight .points li,
+.consoleLight .card p {
+  color: #2a3548;
+}
+
+.consoleLight .points li::before {
+  background: #0080d6;
+}
+
+.consoleLight .card {
+  background: #fff;
+  border: 1px solid rgba(21, 32, 51, 0.08);
+  box-shadow: 0 8px 22px rgba(21, 32, 51, 0.06);
+}
+
+.consoleLight .card h3 {
+  color: #0080d6;
+}
+
+.consoleLight .reflection {
+  max-width: min(72rem, 100%);
+  width: max-content;
+  white-space: nowrap;
+  color: #3a465c;
+  border-color: rgba(0, 128, 214, 0.25);
+  font-size: clamp(1.05rem, min(1.8vw, 2.6vh), 1.35rem);
+}
+
+.consoleLight .metaList li {
+  background: rgba(0, 153, 255, 0.08);
+  color: #152033;
+}
+
+.contentWithBrowser {
+  grid-template-columns: minmax(0, 0.85fr) minmax(280px, 1.15fr) !important;
+  align-items: stretch;
+}
+
+.contentWithStructure {
+  grid-template-columns: minmax(0, 1fr) minmax(240px, 320px) !important;
+}
+
+.browserFrame {
+  margin: 0;
+  width: min(100%, 640px);
+  justify-self: end;
+  align-self: stretch;
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr);
+  border-radius: 16px;
+  overflow: hidden;
+  background: #0f1620;
+  box-shadow: 0 22px 48px rgba(21, 32, 51, 0.22);
+  max-height: min(62vh, 560px);
+}
+
+.browserChrome {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.55rem 0.75rem;
+  background: #1a2330;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.browserChrome span {
+  width: 0.55rem;
+  height: 0.55rem;
+  border-radius: 50%;
+  background: #ff5f57;
+}
+
+.browserChrome span:nth-child(2) {
+  background: #febc2e;
+}
+
+.browserChrome span:nth-child(3) {
+  background: #28c840;
+}
+
+.browserChrome em {
+  margin-left: 0.55rem;
+  font-style: normal;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.browserScreen {
+  min-height: 0;
+  overflow: auto;
+  background: #0b1016;
+  transform-origin: top left;
+}
+
+.browserScreen:not(.browserScreenImage) > * {
+  transform: scale(0.62);
+  transform-origin: top left;
+  width: 161.3%;
+}
+
+.structureVisual {
+  justify-self: end;
+  width: min(100%, 320px);
+  display: grid;
+  gap: 0.75rem;
+  align-content: start;
+}
+
+.structureCard {
+  margin: 0;
+  padding: 1rem 1.1rem;
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0 6px 18px rgba(21, 32, 51, 0.06);
+  border: 1px solid rgba(0, 128, 214, 0.12);
+}
+
+.structureCard h3 {
+  margin: 0 0 0.35rem;
+  font-size: clamp(1rem, 1.5vw, 1.2rem);
+  font-weight: 800;
+  color: #0080d6;
+}
+
+.structureCard p {
+  margin: 0;
+  font-size: clamp(0.92rem, 1.3vw, 1.05rem);
+  font-weight: 600;
+  line-height: 1.4;
+  color: #2a3548;
+  word-break: keep-all;
+}
+
+.pinnedCards {
+  margin-top: 0;
+  margin-inline: clamp(0.5rem, 2vw, 1.5rem);
+}
+
+.haruCream .pinnedCards,
+.consoleLight .pinnedCards,
+.jariLight .pinnedCards {
+  flex: 1 1 auto;
+  align-content: center;
+  align-items: stretch;
+  margin-top: 0;
+}
+
+.haruCream .demoWrap,
+.consoleLight .demoWrap {
+  flex: 1 1 auto;
+  min-height: 0;
+  margin-top: clamp(0.5rem, 1.5vh, 1rem);
+}
+
+@media (max-width: 900px) {
+  .contentWithBrowser,
+  .contentWithStructure {
+    grid-template-columns: 1fr !important;
+  }
+
+  .browserFrame {
+    justify-self: stretch;
+    width: 100%;
+    max-height: min(48vh, 420px);
+  }
+
+  .structureVisual {
+    justify-self: stretch;
+    width: 100%;
+  }
+}
+
+.browserScreenImage {
+  overflow: hidden;
+  background: #fff;
+}
+
+.browserScreen.browserScreenImage > img {
+  transform: none;
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: top left;
+}
+
+.featurePanelBrowser {
+  grid-template-columns: 1fr;
+  grid-template-rows: minmax(0, auto) auto;
+  align-content: start;
+  align-items: start;
+}
+
+.featurePanelBrowser .browserFrame {
+  width: 100%;
+  justify-self: stretch;
+  max-height: min(36vh, 320px);
+}
+
+.jari {
+  background: #f3f7f2;
+}
+
+/* 자리: 라이트 덱 배치, 지도 서비스 그린 톤 */
+.jariLight {
+  background:
+    radial-gradient(720px 420px at 12% 8%, rgba(31, 157, 85, 0.1), transparent 55%),
+    radial-gradient(640px 380px at 88% 78%, rgba(120, 180, 140, 0.12), transparent 50%),
+    #f3f7f2;
+  color: #16251b;
+}
+
+.jariLight .back,
+.jariLight .progress,
+.jariLight .navBtn,
+.jariLight .projectNav a {
+  color: #16251b;
+}
+
+.jariLight .navBtn {
+  border-color: rgba(22, 37, 27, 0.18);
+  background: rgba(31, 157, 85, 0.06);
+}
+
+.jariLight .navBtn:not(:disabled):hover {
+  background: rgba(31, 157, 85, 0.12);
+}
+
+.jariLight .dot {
+  background: rgba(22, 37, 27, 0.2);
+}
+
+.jariLight .dotActive,
+.jariLight .points li::before {
+  background: #1a8a4a;
+}
+
+.jariLight .eyebrow,
+.jariLight .section,
+.jariLight .card h3,
+.jariLight .structureCard h3 {
+  color: #1a8a4a;
+}
+
+.jariLight .contentSlide h2,
+.jariLight .titleSlide h1,
+.jariLight .contentPinnedHead .titleBreak {
+  color: #16251b;
+  max-width: min(42ch, 100%);
+  white-space: nowrap;
+}
+
+.jariLight .contentWithBrowser {
+  grid-template-columns: minmax(0, 1.4fr) minmax(320px, 0.95fr) !important;
+}
+
+.jariLight .contentWithBrowser .contentCopy .points,
+.jariLight .contentWithStructure .contentCopy .points {
+  max-width: none;
+  margin-left: 0;
+}
+
+.jariLight .contentWithBrowser .points li,
+.jariLight .contentWithStructure .points li {
+  white-space: nowrap;
+  font-size: clamp(1.15rem, min(2.15vw, 3.1vh), 1.7rem);
+}
+
+.jariLight .contentPinnedBody .points {
+  max-width: min(72rem, 100%);
+}
+
+.jariLight .contentPinnedBody .points li {
+  white-space: nowrap;
+  font-size: clamp(1.15rem, min(2.1vw, 3vh), 1.65rem);
+}
+
+@media (max-width: 1200px) {
+  .jariLight .contentPinnedHead .titleBreak,
+  .jariLight .contentWithBrowser .points li,
+  .jariLight .contentWithStructure .points li,
+  .jariLight .contentPinnedBody .points li {
+    white-space: normal;
+  }
+}
+
+.jariLight .subtitle,
+.jariLight .lead,
+.jariLight .points li,
+.jariLight .card p,
+.jariLight .structureCard p {
+  color: #2c3b31;
+}
+
+.jariLight .card {
+  background: #fff;
+  border: 1px solid rgba(22, 37, 27, 0.08);
+  box-shadow: 0 8px 22px rgba(22, 37, 27, 0.06);
+}
+
+.jariLight .structureCard {
+  border-color: rgba(26, 138, 74, 0.14);
+}
+
+.jariLight .reflection {
+  color: #3a4a3f;
+  border-color: rgba(26, 138, 74, 0.25);
+  font-size: clamp(1.05rem, min(1.8vw, 2.6vh), 1.35rem);
+}
+
+.jariLight .metaList li {
+  background: rgba(31, 157, 85, 0.08);
+  color: #16251b;
+}
+
+.jariLight .featurePanel {
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(26, 138, 74, 0.12);
+}
+
+.jariLight .featureDesc h3 {
+  background: #1a6b3d;
+}
+
+.jariLight .featureDesc li strong {
+  color: #16251b;
+}
+
+.jariLight .featureDesc li span {
+  color: #3a4a3f;
+}
+
+
+.jariLight .demoWrap,
+.consoleLight .demoWrap {
+  flex: 1 1 auto;
+  min-height: 0;
+  max-height: none;
+  display: flex;
+  flex-direction: column;
+  margin-top: clamp(0.6rem, 2vh, 1.25rem);
+  padding-bottom: 0.25rem;
+}
+
+.jariLight .demoWrap > *,
+.consoleLight .demoWrap > * {
+  flex: 1 1 auto;
+  min-height: 0;
+  max-height: none;
+}
+
+.consoleLight .demoWrap > * {
+  overflow: auto;
+}
+
+.demoBare {
+  justify-content: stretch;
+  padding-block: clamp(0.15rem, 0.8vh, 0.5rem);
+  gap: 0.35rem;
+}
+
+.demoBare .contentPinnedHead {
+  flex: 0 0 auto;
+}
+
+.demoBare .contentPinnedHead .titleBreak {
+  max-width: min(40ch, 100%);
+  font-size: clamp(1.45rem, min(3.2vw, 4.2vh), 2.2rem);
+}
+
+.demoBare .demoWrap {
+  flex: 1 1 auto;
+  min-height: 0;
+  max-height: none;
+  margin-top: 0.35rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: stretch;
+}
+
+.demoBare .demoWrap > * {
+  flex: 1 1 auto;
+  min-height: 0;
+  height: 100%;
+  max-height: none;
+  width: min(100%, 1280px);
+  max-width: 1280px;
+}
+
+.consoleLight .demoBare .demoWrap > * {
+  width: min(96%, 1360px);
+  max-width: 1360px;
+}
+
+.demoBare .demoWrap > * :global([class*="wrapWide"]) {
+  max-height: none;
+  height: 100%;
+  width: 100%;
+}
+
+.jariLight .roleLead,
+.consoleLight .roleLead {
+  max-width: min(64rem, 100%);
+}
+
+.topBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.65rem clamp(0.85rem, 3vw, 1.75rem);
+  flex-shrink: 0;
+}
+
+.back,
+.progress {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.back:hover {
+  color: #fff;
+}
+
+.stage {
+  min-height: 0;
+  overflow: hidden;
+  display: grid;
+  align-content: stretch;
+  padding: clamp(0.35rem, 1.2vh, 0.85rem) clamp(1.25rem, 3.5vw, 2.5rem);
+}
+
+.stage > div {
+  min-height: 0;
+  height: 100%;
+  max-height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.stage > div > * {
+  flex: 1;
+  min-height: 0;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.titleSlide,
+.contentSlide {
+  width: 100%;
+  height: 100%;
+  margin-inline: 0;
+  max-height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.titleSlide {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(240px, 0.85fr);
+  gap: clamp(1.25rem, 4vw, 3rem);
+  align-items: center;
+  justify-content: stretch;
+}
+
+.titleCopy {
+  min-width: 0;
+}
+
+.eyebrow,
+.section {
+  margin: 0 0 0.45rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.titleSlide h1,
+.contentSlide h2 {
+  margin: 0;
+  font-size: clamp(1.55rem, 3.6vw, 2.85rem);
+  font-weight: 800;
+  line-height: 1.18;
+  color: #fff;
+  max-width: min(28ch, 100%);
+}
+
+.subtitle,
+.lead {
+  margin: 0.55rem 0 0;
+  max-width: min(48rem, 100%);
+  font-size: clamp(0.95rem, 1.7vw, 1.15rem);
+  line-height: 1.45;
+  color: rgba(255, 255, 255, 0.86);
+}
+
+.metaList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin: 0.85rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.metaList li {
+  padding: 0.3rem 0.65rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.12);
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+
+.titleHero {
+  position: relative;
+  margin: 0;
+  border-radius: 18px;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.28);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.32);
+  justify-self: end;
+  width: min(100%, 460px);
+}
+
+.titleHero img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+}
+
+.titleHero figcaption {
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+  padding: 0.28rem 0.6rem;
+  border-radius: 999px;
+  background: rgba(10, 14, 20, 0.72);
+  backdrop-filter: blur(8px);
+  color: rgba(255, 255, 255, 0.92);
+  font-size: 0.7rem;
+  font-weight: 700;
+}
+
+.hero_haru {
+  aspect-ratio: 9 / 16;
+  max-height: min(48vh, 420px);
+}
+
+.hero_console,
+.hero_jari {
+  aspect-ratio: 16 / 10;
+  width: min(100%, 560px);
+  max-height: min(46vh, 360px);
+}
+
+.hero_jari img {
+  object-fit: cover;
+  object-position: top left;
+}
+
+.hero_console img {
+  object-fit: cover;
+  object-position: center;
+}
+
+@media (max-width: 860px) {
+  .titleSlide {
+    grid-template-columns: 1fr;
+  }
+
+  .titleHero {
+    justify-self: center;
+    order: -1;
+    width: min(100%, 200px);
+  }
+
+  .hero_haru {
+    max-height: min(28vh, 220px);
+  }
+
+  .hero_console,
+  .hero_jari {
+    width: min(100%, 100%);
+    max-height: min(22vh, 160px);
+  }
+
+  .titleSlide h1 {
+    max-width: none;
+    font-size: clamp(1.45rem, 7vw, 2rem);
+  }
+}
+
+.points {
+  display: grid;
+  gap: 0.55rem;
+  margin: 0.85rem 0 0;
+  padding: 0;
+  list-style: none;
+  max-width: min(52rem, 100%);
+}
+
+.points li {
+  position: relative;
+  padding-left: 1.1rem;
+  font-size: clamp(0.9rem, 1.4vw, 1rem);
+  line-height: 1.45;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.points li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.5rem;
+  width: 0.4rem;
+  height: 0.4rem;
+  border-radius: 50%;
+  background: #ff8038;
+}
+
+.haru .points li::before {
+  background: #ffe97b;
+}
+
+.console .points li::before {
+  background: #0099ff;
+}
+
+.cardGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.7rem;
+  margin-top: 0.85rem;
+}
+
+.cardGrid:has(> :nth-child(4):last-child) {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.card {
+  padding: 0.85rem 0.95rem;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  backdrop-filter: blur(8px);
+}
+
+.card h3 {
+  margin: 0 0 0.35rem;
+  font-size: 0.95rem;
+  color: #fff;
+}
+
+.card p {
+  margin: 0;
+  font-size: 0.84rem;
+  line-height: 1.4;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(0.75rem, 2vw, 1.4rem);
+  margin-top: 0.85rem;
+  flex: 1;
+  min-height: 0;
+  align-items: stretch;
+  max-width: 100%;
+}
+
+.galleryWide {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.shot {
+  margin: 0;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  gap: 0.4rem;
+  min-height: 0;
+  height: 100%;
+}
+
+.shot img {
+  width: 100%;
+  height: 100%;
+  max-height: min(58vh, 520px);
+  aspect-ratio: 9 / 16;
+  object-fit: cover;
+  object-position: top center;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.22);
+}
+
+.shot figcaption {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.82);
+  text-align: center;
+}
+
+.demoWrap {
+  margin-top: 0.55rem;
+  max-height: calc(100% - 4.2rem);
+  overflow: hidden;
+}
+
+.timeline {
+  display: grid;
+  gap: 0.55rem;
+  margin: 0.75rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.timelineItem {
+  padding: 0.7rem 0.9rem;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.timelineHead {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-bottom: 0.3rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.timelineItem strong {
+  display: block;
+  margin-bottom: 0.2rem;
+  font-size: 0.95rem;
+  color: #fff;
+}
+
+.timelineItem p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.82);
+  line-height: 1.4;
+  font-size: 0.84rem;
+}
+
+.status_done {
+  color: #9dffb5;
+  font-style: normal;
+}
+
+.status_doing {
+  color: #ffe97b;
+  font-style: normal;
+}
+
+.status_todo {
+  color: rgba(255, 255, 255, 0.55);
+  font-style: normal;
+}
+
+.reflection {
+  margin: 0.85rem 0 0;
+  max-width: 40rem;
+  padding: 0.75rem 0.9rem;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.1);
+  border-left: 3px solid #ff8038;
+  color: rgba(255, 255, 255, 0.88);
+  line-height: 1.45;
+  font-size: 0.9rem;
+}
+
+.controls {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 0.75rem;
+  align-items: center;
+  padding: 0.45rem clamp(0.85rem, 3vw, 1.75rem);
+  flex-shrink: 0;
+}
+
+.navBtn {
+  min-width: 4.25rem;
+  min-height: 2.2rem;
+  padding: 0.35rem 0.8rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.navBtn:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.navBtn:not(:disabled):hover {
+  background: rgba(255, 255, 255, 0.16);
+}
+
+.dots {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+
+.dot {
+  width: 0.48rem;
+  height: 0.48rem;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.28);
+}
+
+.dotActive {
+  background: #fff;
+  transform: scale(1.15);
+}
+
+.projectNav {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.35rem clamp(0.85rem, 3vw, 1.75rem) 0.7rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.projectNav a {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.projectNav a:hover {
+  color: #fff;
+}
+
+@media (max-width: 900px) {
+  .cardGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .gallery,
+  .galleryWide {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .shot img {
+    max-height: min(34vh, 280px);
+  }
+}
+
+@media (max-width: 640px) {
+  .cardGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery,
+  .galleryWide {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .contentSlide h2 {
+    max-width: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .stage {
+    animation: none;
+  }
+}
+
+/* force-reload 1792269340 */

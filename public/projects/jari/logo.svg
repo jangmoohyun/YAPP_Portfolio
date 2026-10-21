@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <defs>
+    <linearGradient id="mark" x1="0.2" y1="0" x2="0.8" y2="1">
+      <stop offset="0" stop-color="#34d399"/>
+      <stop offset="1" stop-color="#15803d"/>
+    </linearGradient>
+    <radialGradient id="glowA" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#34d399" stop-opacity="0.28"/>
+      <stop offset="1" stop-color="#34d399" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowB" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#15803d" stop-opacity="0.16"/>
+      <stop offset="1" stop-color="#15803d" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="170%">
+      <feDropShadow dx="0" dy="14" stdDeviation="16" flood-color="#15803d" flood-opacity="0.28"/>
+    </filter>
+  </defs>
+  <rect width="800" height="600" fill="#f3f7f2"/>
+  <circle cx="140" cy="120" r="200" fill="url(#glowA)"/>
+  <circle cx="680" cy="500" r="240" fill="url(#glowB)"/>
+  <circle cx="400" cy="250" r="150" fill="none" stroke="#1a8a4a" stroke-opacity="0.14" stroke-width="2" stroke-dasharray="6 8"/>
+  <circle cx="400" cy="250" r="220" fill="none" stroke="#1a8a4a" stroke-opacity="0.08" stroke-width="2" stroke-dasharray="6 10"/>
+  <g filter="url(#shadow)">
+    <rect x="330" y="180" width="140" height="140" rx="46" fill="url(#mark)"/>
+  </g>
+  <text x="400" y="252" text-anchor="middle" dominant-baseline="central"
+        font-family="Pretendard, 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif"
+        font-size="78" font-weight="800" letter-spacing="-3" fill="#ffffff">&#xC790;</text>
+  <text x="400" y="408" text-anchor="middle"
+        font-family="Pretendard, 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif"
+        font-size="64" font-weight="800" letter-spacing="-2.5" fill="#16251b">&#xC790;&#xB9AC;</text>
+  <text x="400" y="452" text-anchor="middle"
+        font-family="Pretendard, 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif"
+        font-size="24" font-weight="600" fill="#5b6b60">&#xC548;&#xC591;&#xC2DC; &#xC0C1;&#xAD8C;&#xBD84;&#xC11D; &#xD50C;&#xB7AB;&#xD3FC;</text>
+</svg>

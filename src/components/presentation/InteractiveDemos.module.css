@@ -1,0 +1,128 @@
+.wrap,
+.wrapWide {
+  display: grid;
+  gap: 0.85rem;
+  align-items: start;
+  max-height: min(52vh, 480px);
+  overflow: hidden;
+}
+
+.wrap {
+  grid-template-columns: minmax(200px, 260px) 1fr;
+}
+
+.wrapWide {
+  grid-template-columns: 1fr;
+  max-height: none;
+  min-height: 0;
+  height: 100%;
+  overflow: auto;
+  border-radius: 16px;
+  border: 1px solid rgba(21, 32, 51, 0.12);
+  background: #fff;
+  box-shadow: 0 18px 40px rgba(21, 32, 51, 0.12);
+}
+
+.device {
+  border-radius: 18px;
+  overflow: hidden;
+  background: #111;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.28);
+}
+
+.deviceChrome {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 8px;
+  background: #1b1b1b;
+}
+
+.deviceChrome span {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #ff5f57;
+}
+
+.deviceChrome span:nth-child(2) {
+  background: #febc2e;
+}
+
+.deviceChrome span:nth-child(3) {
+  background: #28c840;
+}
+
+.deviceChrome em {
+  margin-left: 8px;
+  font-style: normal;
+  font-size: 10px;
+  color: rgba(255, 255, 255, 0.55);
+  font-weight: 600;
+}
+
+.deviceScreen {
+  background: #000;
+}
+
+.phoneStage {
+  height: min(48vh, 440px);
+  max-height: 440px;
+}
+
+.aside {
+  display: grid;
+  gap: 0.4rem;
+  align-content: start;
+  color: rgba(255, 255, 255, 0.88);
+  min-height: 0;
+  overflow: hidden;
+}
+
+.asideEyebrow {
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.aside h3 {
+  margin: 0;
+  font-size: 1.05rem;
+  color: #fff;
+}
+
+.aside ul {
+  display: grid;
+  gap: 0.28rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.aside li {
+  padding: 0.4rem 0.55rem;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  font-size: 0.78rem;
+  line-height: 1.35;
+}
+
+@media (max-width: 900px) {
+  .wrap,
+  .wrapWide {
+    grid-template-columns: 1fr;
+    max-height: min(50vh, 420px);
+  }
+
+  .aside {
+    display: none;
+  }
+
+  .phoneStage {
+    height: min(46vh, 400px);
+  }
+}

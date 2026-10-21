@@ -1,0 +1,381 @@
+/* peer 스위치: 왼쪽(8px+버튼+8px) = 오른쪽(버튼+8px+8px) 여백 대칭 */
+.dashboard-terminal-workspace {
+  --dashboard-peer-rail-width: 0px;
+  flex: 1;
+  min-height: 0;
+  min-width: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: center;
+  gap: var(--dashboard-peer-gap, 8px);
+  overflow: visible;
+}
+
+.dashboard-terminal-workspace__center {
+  flex: 0 1 auto;
+  width: min(
+    var(--dashboard-terminal-max-width, 1440px),
+    calc(
+      100% - (2 * var(--dashboard-peer-rail-width, 0px)) -
+        (2 * var(--dashboard-peer-gap, 8px))
+    )
+  );
+  min-width: 0;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 오른쪽 여백 = 버튼 너비(왼쪽 버튼과 대칭) + flex gap이 main·터미널 8px 역할 */
+.dashboard-terminal-workspace__peer-spacer {
+  flex: 0 0 var(--dashboard-peer-rail-width, 0px);
+  width: var(--dashboard-peer-rail-width, 0px);
+  min-width: 0;
+  pointer-events: none;
+}
+
+.dashboard-terminal-workspace__peer-rail {
+  flex: 0 0 auto;
+  align-self: flex-start;
+  padding-top: 34px;
+  width: max-content;
+  padding-left: 0;
+  padding-right: 0;
+  margin: 0;
+  pointer-events: auto;
+}
+
+.dashboard-terminal-workspace .terminal-footer-peer-switch {
+  position: static;
+  width: max-content;
+  max-width: none;
+}
+
+.dashboard-terminal-workspace .dashboard-terminal-slot {
+  max-width: var(--dashboard-terminal-max-width, 1440px);
+  /* 인라인 margin: 0 auto 가 flex 영역 안에서 터미널을 가운데 밀어 버튼과 간격이 벌어짐 */
+  margin: 0 !important;
+  width: 100%;
+}
+
+/* 역할 1개·전체화면 등 peer rail 없을 때 — 예전 단독 TerminalStack 과 동일한 가운데 정렬 */
+.dashboard-terminal-workspace--solo {
+  justify-content: center;
+}
+
+.dashboard-terminal-workspace--solo .dashboard-terminal-workspace__center {
+  flex: 1 1 auto;
+  width: 100%;
+  max-width: var(--dashboard-terminal-max-width, 1440px);
+}
+
+.dashboard-terminal-workspace--solo .dashboard-terminal-slot {
+  margin: 0 auto !important;
+}
+
+.terminal-footer-peer-switch {
+  pointer-events: auto;
+  width: max-content;
+  box-sizing: border-box;
+}
+
+.terminal-footer-peer-switch .dashboard-segment-track--vertical {
+  flex-direction: column;
+  align-items: stretch;
+  width: max-content;
+  height: auto !important;
+  min-height: 0 !important;
+  max-height: none !important;
+  padding: 0 !important;
+  gap: 0;
+  overflow: hidden;
+  min-width: 0;
+  border-radius: 9px;
+  background: rgba(255, 255, 255, 0.94);
+  border: 1px solid rgba(59, 130, 246, 0.38);
+  box-shadow:
+    0 10px 28px rgba(15, 23, 42, 0.14),
+    0 2px 8px rgba(59, 130, 246, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(14px) saturate(140%);
+  -webkit-backdrop-filter: blur(14px) saturate(140%);
+}
+
+.terminal-footer-peer-switch .dashboard-segment-tab {
+  flex: 0 0 var(--dashboard-peer-tab-height, 36px);
+  width: 100%;
+  min-width: 0;
+  height: var(--dashboard-peer-tab-height, 36px);
+  min-height: var(--dashboard-peer-tab-height, 36px);
+  box-sizing: border-box;
+  padding: 0 1px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1px;
+  font-size: 0.48rem;
+  font-weight: 800;
+  letter-spacing: 0.01em;
+  border-radius: 0;
+  border: none;
+  border-left: 2px solid rgba(148, 163, 184, 0.45);
+  border-bottom: 1px solid rgba(148, 163, 184, 0.22);
+  color: #334155;
+  background: rgba(226, 232, 240, 0.88);
+  box-shadow:
+    inset 0 1px 2px rgba(15, 23, 42, 0.06),
+    inset 0 1px 0 rgba(255, 255, 255, 0.55);
+  transition:
+    background 0.15s ease,
+    color 0.15s ease,
+    border-color 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+/* peer 레일: 선택 시 트랙 전체를 활성 색으로 — 탭은 반만 칠해지지 않음 */
+.terminal-footer-peer-switch.dashboard-peer-instance-rail
+  .dashboard-segment-track--vertical:has(.dashboard-segment-tab--active) {
+  background: linear-gradient(
+    180deg,
+    rgba(224, 242, 254, 0.96) 0%,
+    rgba(186, 230, 253, 0.94) 100%
+  );
+  border-color: rgba(56, 189, 248, 0.55);
+  box-shadow:
+    0 4px 14px rgba(14, 165, 233, 0.14),
+    inset 0 1px 0 rgba(255, 255, 255, 0.65);
+}
+
+.terminal-footer-peer-switch.dashboard-peer-instance-rail .dashboard-segment-tab {
+  background: transparent;
+  box-shadow: none;
+}
+
+.terminal-footer-peer-switch.dashboard-peer-instance-rail
+  .dashboard-segment-tab:not(.dashboard-segment-tab--active) {
+  color: rgba(51, 65, 85, 0.72);
+  border-bottom-color: rgba(56, 189, 248, 0.2);
+}
+
+.terminal-footer-peer-switch.dashboard-peer-instance-rail
+  .dashboard-segment-tab:hover:not(.dashboard-segment-tab--active) {
+  color: #0f172a;
+  background: rgba(255, 255, 255, 0.22);
+}
+
+.terminal-footer-peer-switch .dashboard-segment-tab:first-child {
+  border-radius: 10px 10px 0 0;
+}
+
+.terminal-footer-peer-switch .dashboard-segment-tab:last-child {
+  border-radius: 0 0 10px 10px;
+  border-bottom: none;
+}
+
+.terminal-footer-peer-switch .dashboard-segment-tab:hover:not(.dashboard-segment-tab--active) {
+  color: #0f172a;
+  background: #f8fafc;
+}
+
+.terminal-footer-peer-switch .dashboard-segment-tab__label {
+  min-width: 0;
+  flex: 1 1 auto;
+  overflow: visible;
+  text-overflow: clip;
+  white-space: nowrap;
+}
+
+.terminal-footer-peer-switch .dashboard-segment-tab__peer-marker {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  background: #64748b;
+  box-shadow:
+    inset 0 0 0 1px rgba(15, 23, 42, 0.2),
+    0 0 0 1px rgba(255, 255, 255, 0.4);
+}
+
+.terminal-footer-peer-switch.dashboard-peer-instance-rail .dashboard-segment-tab--active {
+  color: #0369a1;
+  background: transparent;
+  border-left-color: rgba(56, 189, 248, 0.55);
+  box-shadow: none;
+  text-shadow: none;
+}
+
+.terminal-footer-peer-switch
+  .dashboard-segment-tab--active
+  .dashboard-segment-tab__peer-marker {
+  background: #22c55e;
+  box-shadow:
+    0 0 0 2px rgba(34, 197, 94, 0.28),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.35);
+}
+
+/* —— 터미널 카드: 참고 콘솔 UI —— */
+.terminal-console {
+  flex: 1;
+  width: 100%;
+  min-height: 0;
+  max-height: 100%;
+  display: flex;
+  flex-direction: column;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 8px 32px rgba(15, 23, 42, 0.08);
+  font-family: "Inter", system-ui, sans-serif;
+}
+
+.terminal-console__chrome {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 10px;
+  flex-shrink: 0;
+  background: linear-gradient(180deg, #fafbfc 0%, #f1f5f9 100%);
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.terminal-console__chrome-left {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  justify-content: flex-start;
+  min-width: 0;
+}
+
+.terminal-console__chrome-spacer {
+  flex: 1;
+  min-width: 0;
+}
+
+.terminal-console__hint {
+  font-size: 9px;
+  color: #94a3b8;
+  font-weight: 500;
+  flex-shrink: 0;
+}
+
+.terminal-console__chrome-right {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+.terminal-console__expand {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2px;
+  border-radius: 6px;
+  border: 1px solid #cbd5e1;
+  background: linear-gradient(180deg, #fff 0%, #f1f5f9 100%);
+  cursor: pointer;
+  line-height: 0;
+  transition:
+    background 0.12s ease,
+    border-color 0.12s ease;
+}
+
+.terminal-console__expand:hover {
+  border-color: #94a3b8;
+  background: #fff;
+}
+
+.terminal-console__expand:focus-visible {
+  outline: 2px solid #3b82f6;
+  outline-offset: 1px;
+}
+
+.terminal-console__expand-icon {
+  display: block;
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+  vertical-align: middle;
+  pointer-events: none;
+}
+
+.terminal-console__dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #22c55e;
+  box-shadow: 0 0 0 2px rgba(34, 197, 94, 0.25);
+  flex-shrink: 0;
+}
+
+.terminal-console__title {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  color: #334155;
+  text-transform: uppercase;
+}
+
+.terminal-console__body {
+  flex: 1;
+  width: 100%;
+  min-height: 0;
+  overflow: hidden;
+  background: #0a0a0c;
+  position: relative;
+}
+
+.terminal-console__iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+}
+
+/*
+ * 같은 그룹 내 peer 전환 시 전환 피드백.
+ * iframe은 언마운트하지 않고 opacity + 미세 slide 로 cross-fade 처리함.
+ * 비활성 레이어는 트랜지션 종료 후 visibility: hidden 으로 떨궈서 포커스/스크린리더에서 제외.
+ */
+.dashboard-terminal-layer {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  z-index: 0;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translate3d(8px, 0, 0) scale(0.996);
+  transition:
+    opacity 220ms ease,
+    transform 240ms cubic-bezier(0.22, 1, 0.36, 1),
+    visibility 0s linear 240ms;
+  will-change: opacity, transform;
+}
+
+.dashboard-terminal-layer.is-active {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: none;
+  z-index: 1;
+  transition:
+    opacity 240ms ease,
+    transform 260ms cubic-bezier(0.22, 1, 0.36, 1),
+    visibility 0s linear 0s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .dashboard-terminal-layer,
+  .dashboard-terminal-layer.is-active {
+    transition: visibility 0s linear 0s;
+    transform: none;
+  }
+}

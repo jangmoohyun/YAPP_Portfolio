@@ -1,0 +1,392 @@
+/* Colors from Flutter source: home_shell / today_question / write_answer */
+.shell {
+  --cream: #fdfbf0;
+  --title-green: #3a6a3f;
+  --body-grey: #4a4a4a;
+  --muted-grey: #8a8a8a;
+  --nav-fill: #b3e8f0e4;
+  --nav-border: #99c5d5c0;
+  --button-green: #2f8f4e;
+  --soft-green: #7fa87a;
+  --field-fill: #fffcf6;
+  --field-border: #c5d9b8;
+  --photo-btn: #f3efe3;
+
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: var(--cream);
+  color: var(--body-grey);
+  overflow: hidden;
+  font-family: "Apple SD Gothic Neo", "Pretendard", system-ui, sans-serif;
+}
+
+.branchL,
+.branchR {
+  position: absolute;
+  width: 42%;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.9;
+}
+
+.branchL {
+  left: -8%;
+  top: 8%;
+}
+
+.branchR {
+  right: -10%;
+  bottom: 18%;
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  height: calc(100% - 78px);
+  overflow: auto;
+  padding: 14px 14px 10px;
+}
+
+.topBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.iconBtn {
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  background: rgba(58, 106, 63, 0.08);
+  color: var(--title-green);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.brand {
+  text-align: center;
+}
+
+.brand strong {
+  display: block;
+  font-size: 18px;
+  color: var(--title-green);
+  font-weight: 800;
+  letter-spacing: -0.4px;
+}
+
+.brand img {
+  width: 16px;
+  height: 16px;
+  margin-top: 2px;
+}
+
+.dateTape {
+  width: fit-content;
+  margin: 8px auto 14px;
+  padding: 6px 18px;
+  background: url("/projects/haru-once/decor/datepanel.png") center / 100% 100% no-repeat;
+  color: var(--title-green);
+  font-size: 13px;
+  font-weight: 700;
+  min-width: 120px;
+  text-align: center;
+}
+
+.letter {
+  position: relative;
+  width: 100%;
+  max-width: 320px;
+  margin: 0 auto;
+}
+
+.letterBg {
+  display: grid;
+  width: 100%;
+}
+
+.letterTop,
+.letterBody,
+.letterBottom {
+  width: 100%;
+  display: block;
+}
+
+.letterBody {
+  margin-top: -2px;
+  min-height: 120px;
+  object-fit: fill;
+}
+
+.letterTop {
+  margin-bottom: -1px;
+}
+
+.letterBottom {
+  margin-top: -1px;
+}
+
+.letterInner {
+  position: absolute;
+  inset: 18% 10% 16% 14%;
+  display: grid;
+  gap: 6px;
+  align-content: start;
+}
+
+.toLine {
+  font-size: 12px;
+  color: var(--muted-grey);
+}
+
+.heartLine {
+  width: 64px;
+  height: 8px;
+  object-fit: contain;
+}
+
+.dateSmall {
+  font-size: 12px;
+  color: var(--soft-green);
+  font-weight: 700;
+}
+
+.question {
+  margin-top: 4px;
+  font-size: 16px;
+  line-height: 1.45;
+  color: var(--title-green);
+  font-weight: 700;
+  white-space: pre-wrap;
+}
+
+.badge {
+  position: absolute;
+  right: -6px;
+  top: 28%;
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  background: var(--title-green);
+  color: #fff;
+  font-size: 10px;
+  font-weight: 800;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  line-height: 1.2;
+  box-shadow: 0 6px 14px rgba(58, 106, 63, 0.25);
+}
+
+.envelope {
+  width: 54px;
+  margin: 8px 0 0 auto;
+}
+
+.carousel {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  margin-top: 12px;
+}
+
+.dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #c9d7c4;
+}
+
+.dotOn {
+  background: var(--title-green);
+}
+
+.primary {
+  display: block;
+  width: min(100%, 280px);
+  margin: 14px auto 0;
+  min-height: 44px;
+  border-radius: 14px;
+  background: var(--button-green);
+  color: #fff;
+  font-weight: 800;
+}
+
+.answers {
+  display: grid;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.answerCard {
+  background: #fff;
+  border: 1px solid #e2ebda;
+  border-radius: 14px;
+  padding: 10px 12px;
+}
+
+.answerCard strong {
+  display: block;
+  color: var(--title-green);
+  font-size: 13px;
+}
+
+.answerCard span {
+  font-size: 11px;
+  color: var(--muted-grey);
+}
+
+.answerCard p {
+  margin-top: 6px;
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+.writeBox {
+  background: var(--field-fill);
+  border: 1px solid var(--field-border);
+  border-radius: 14px;
+  padding: 10px;
+}
+
+.writeBox textarea {
+  width: 100%;
+  min-height: 110px;
+  border: none;
+  resize: none;
+  background: transparent;
+  color: var(--body-grey);
+  font: inherit;
+  outline: none;
+}
+
+.photoBtn {
+  margin-top: 8px;
+  width: 100%;
+  min-height: 40px;
+  border-radius: 12px;
+  background: var(--photo-btn);
+  color: var(--title-green);
+  font-weight: 700;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.albumTile {
+  aspect-ratio: 1;
+  border-radius: 14px;
+  display: grid;
+  place-items: end start;
+  padding: 10px;
+  color: var(--title-green);
+  font-weight: 800;
+  font-size: 13px;
+  border: 1px solid #e4ecd9;
+}
+
+.diaryItem {
+  background: #fff;
+  border-radius: 14px;
+  border: 1px solid #e2ebda;
+  padding: 12px;
+  margin-bottom: 8px;
+}
+
+.diaryItem strong {
+  color: var(--title-green);
+}
+
+.tempHero {
+  text-align: center;
+  padding: 18px 10px;
+  background: #fff;
+  border-radius: 18px;
+  border: 1px solid #e2ebda;
+}
+
+.tempHero em {
+  display: block;
+  font-style: normal;
+  font-size: 40px;
+  font-weight: 800;
+  color: var(--title-green);
+}
+
+.tempHero span {
+  color: #e86a4a;
+  font-weight: 700;
+  font-size: 13px;
+}
+
+.memberRow {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 4px;
+  border-bottom: 1px solid #edf2e6;
+  font-size: 13px;
+}
+
+.nav {
+  position: absolute;
+  left: 5%;
+  right: 5%;
+  bottom: 10px;
+  z-index: 3;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2px;
+  padding: 6px 6px 4px;
+  border-radius: 22px;
+  background: rgba(232, 240, 228, 0.7);
+  border: 1px solid rgba(197, 213, 192, 0.6);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+
+.navBtn {
+  display: grid;
+  justify-items: center;
+  gap: 2px;
+  padding: 2px 0;
+  color: var(--muted-grey);
+  font-size: 9px;
+  font-weight: 500;
+  letter-spacing: -0.4px;
+}
+
+.navBtn img {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+  opacity: 0.55;
+}
+
+.navOn {
+  color: var(--title-green);
+  font-weight: 700;
+}
+
+.navOn img {
+  opacity: 1;
+}
+
+.toast {
+  position: absolute;
+  left: 12%;
+  right: 12%;
+  bottom: 96px;
+  z-index: 4;
+  padding: 10px 12px;
+  border-radius: 12px;
+  background: rgba(47, 143, 78, 0.95);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  text-align: center;
+}

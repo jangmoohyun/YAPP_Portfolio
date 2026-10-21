@@ -1,0 +1,502 @@
+.wrap {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(300px, 1.1fr);
+  gap: clamp(0.85rem, 2vw, 1.5rem);
+  height: 100%;
+  max-height: none;
+  max-width: 1040px;
+  margin-inline: auto;
+  width: 100%;
+  color: #16251b;
+}
+
+.panel {
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr) auto;
+  min-height: 0;
+  border-radius: 20px;
+  background: #fff;
+  border: 1px solid rgba(26, 138, 74, 0.14);
+  box-shadow: 0 18px 40px rgba(22, 37, 27, 0.1);
+  overflow: hidden;
+}
+
+.head {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  padding: 0.85rem 1rem;
+  border-bottom: 1px solid rgba(22, 37, 27, 0.07);
+}
+
+.avatar {
+  display: grid;
+  place-items: center;
+  width: 2.1rem;
+  height: 2.1rem;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #1f9d55, #15803d);
+  color: #fff;
+  font-size: 1rem;
+}
+
+.head h3 {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 800;
+}
+
+.head p {
+  margin: 0.1rem 0 0;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #5b6b60;
+}
+
+.online {
+  margin-left: auto;
+  color: #22c55e;
+  font-size: 0.7rem;
+}
+
+.chat {
+  min-height: 0;
+  overflow: auto;
+  padding: 1rem;
+  background: #f7faf7;
+}
+
+.welcome {
+  display: grid;
+  justify-items: center;
+  text-align: center;
+  gap: 0.45rem;
+  padding-top: 0.5rem;
+}
+
+.sparkle {
+  font-size: 1.6rem;
+  color: #1f9d55;
+}
+
+.welcome h4 {
+  margin: 0;
+  font-size: clamp(1.05rem, 1.7vw, 1.25rem);
+  font-weight: 800;
+}
+
+.welcome p {
+  margin: 0 0 0.4rem;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #5b6b60;
+  word-break: keep-all;
+}
+
+.suggestions {
+  display: grid;
+  gap: 0.45rem;
+  width: min(100%, 360px);
+}
+
+.suggestions button,
+.others button {
+  font: inherit;
+  cursor: pointer;
+  border: 1px solid rgba(26, 138, 74, 0.22);
+  background: #fff;
+  color: #16251b;
+  border-radius: 12px;
+  transition:
+    background 0.15s ease,
+    border-color 0.15s ease;
+}
+
+.suggestions button {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+  padding: 0.65rem 0.8rem;
+  font-size: 0.88rem;
+  font-weight: 700;
+  text-align: left;
+}
+
+.suggestions button span {
+  color: #1f9d55;
+}
+
+.suggestions button:hover,
+.others button:not(:disabled):hover {
+  background: rgba(31, 157, 85, 0.08);
+  border-color: rgba(26, 138, 74, 0.45);
+}
+
+.messages {
+  display: grid;
+  gap: 0.7rem;
+  align-content: start;
+}
+
+.user {
+  justify-self: end;
+  max-width: 82%;
+  padding: 0.6rem 0.85rem;
+  border-radius: 14px 14px 4px 14px;
+  background: #1a8a4a;
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.ai {
+  justify-self: start;
+  max-width: 94%;
+  display: grid;
+  gap: 0.3rem;
+  padding: 0.75rem 0.9rem;
+  border-radius: 14px 14px 14px 4px;
+  background: #fff;
+  border: 1px solid rgba(22, 37, 27, 0.08);
+}
+
+.ai strong {
+  font-size: 0.78rem;
+  font-weight: 800;
+  color: #1a8a4a;
+}
+
+.ai p {
+  margin: 0;
+  font-size: 0.86rem;
+  font-weight: 600;
+  line-height: 1.45;
+  color: #2c3b31;
+  word-break: keep-all;
+}
+
+.loading p {
+  color: #5b6b60;
+  animation: pulse 1s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  50% {
+    opacity: 0.45;
+  }
+}
+
+.reco {
+  display: grid;
+  gap: 0.35rem;
+  margin-top: 0.35rem;
+}
+
+.reco button {
+  font: inherit;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.7rem;
+  border-radius: 10px;
+  border: 1px solid rgba(26, 138, 74, 0.2);
+  background: #f3faf5;
+  color: #16251b;
+  font-size: 0.84rem;
+  font-weight: 700;
+  text-align: left;
+}
+
+.reco button em {
+  margin-left: 0.4rem;
+  font-style: normal;
+  font-weight: 600;
+  color: #6b7b70;
+}
+
+.reco button strong {
+  color: #1a8a4a;
+  font-size: 0.78rem;
+  white-space: nowrap;
+}
+
+.reco button:hover,
+.recoOn {
+  border-color: #1a8a4a !important;
+  background: rgba(31, 157, 85, 0.12) !important;
+}
+
+.toast {
+  margin-top: 0.3rem !important;
+  font-size: 0.8rem !important;
+  color: #1a8a4a !important;
+}
+
+.input {
+  padding: 0.7rem 0.85rem;
+  border-top: 1px solid rgba(22, 37, 27, 0.07);
+  background: #fff;
+}
+
+.field {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.55rem 0.55rem 0.55rem 0.85rem;
+  border-radius: 12px;
+  background: #f1f5f2;
+  font-size: 0.86rem;
+  font-weight: 600;
+  color: #7b8a80;
+}
+
+.field b {
+  display: grid;
+  place-items: center;
+  width: 1.7rem;
+  height: 1.7rem;
+  border-radius: 9px;
+  background: #1a8a4a;
+  color: #fff;
+}
+
+.others {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.others button {
+  padding: 0.4rem 0.65rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.others button:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+.others .reset {
+  margin-left: auto;
+  border-color: transparent;
+  color: #5b6b60;
+}
+
+.pipeline {
+  display: grid;
+  grid-template-rows: auto auto minmax(0, 1fr) auto;
+  gap: 0.65rem;
+  min-height: 0;
+}
+
+.pipeEyebrow {
+  margin: 0;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  color: #1a8a4a;
+}
+
+.pipeMeta {
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #5b6b60;
+}
+
+.pipeMeta b {
+  padding: 0.15rem 0.5rem;
+  border-radius: 999px;
+  background: #1a8a4a;
+  color: #fff;
+  font-size: 0.74rem;
+}
+
+.pipeline ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  min-height: 0;
+  overflow: auto;
+}
+
+.pipeline li {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 0.7rem;
+  align-items: center;
+  flex: 0 0 auto;
+  padding: 0.65rem 0.9rem;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(22, 37, 27, 0.1);
+  box-shadow: 0 4px 12px rgba(22, 37, 27, 0.05);
+  opacity: 0.55;
+  overflow: hidden;
+  transition:
+    opacity 0.2s ease,
+    background 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.pipeline li div {
+  display: grid;
+  gap: 0.12rem;
+  min-width: 0;
+}
+
+.pipeline li strong {
+  font-size: clamp(0.9rem, 1.3vw, 1.05rem);
+  font-weight: 800;
+  line-height: 1.25;
+}
+
+.pipeline li em {
+  display: block;
+  font-style: normal;
+  font-size: clamp(0.76rem, 1.1vw, 0.88rem);
+  font-weight: 600;
+  line-height: 1.35;
+  color: #5b6b60;
+  word-break: keep-all;
+  overflow-wrap: anywhere;
+}
+
+.stepNo {
+  display: grid;
+  place-items: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background: rgba(22, 37, 27, 0.1);
+  font-size: 0.95rem;
+  font-weight: 800;
+  flex-shrink: 0;
+}
+
+.pipeline li.active {
+  opacity: 1;
+  background: #fff;
+  border-color: #1a8a4a;
+  box-shadow: 0 6px 16px rgba(26, 138, 74, 0.14);
+}
+
+.pipeline li.active .stepNo {
+  background: #1a8a4a;
+  color: #fff;
+}
+
+.pipeline li.done {
+  opacity: 1;
+  background: #fff;
+}
+
+.pipeline li.done .stepNo {
+  background: rgba(31, 157, 85, 0.18);
+  color: #1a8a4a;
+}
+
+.notice {
+  margin: 0;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: #7b8a80;
+}
+
+@media (max-height: 920px) {
+  .notice {
+    display: none;
+  }
+
+  .pipeEyebrow {
+    font-size: 0.85rem;
+  }
+
+  .pipeMeta {
+    font-size: 0.78rem;
+  }
+}
+
+@media (max-height: 1000px) {
+  .head {
+    padding: 0.55rem 0.9rem;
+  }
+
+  .chat {
+    padding: 0.7rem 0.9rem;
+  }
+
+  .welcome {
+    gap: 0.3rem;
+    padding-top: 0;
+  }
+
+  .welcome > p,
+  .sparkle {
+    display: none;
+  }
+
+  .suggestions {
+    gap: 0.3rem;
+  }
+
+  .suggestions button {
+    padding: 0.45rem 0.7rem;
+    font-size: 0.82rem;
+  }
+
+  .input {
+    padding: 0.5rem 0.75rem;
+  }
+
+  .field {
+    padding-block: 0.35rem;
+  }
+
+  .pipeline {
+    gap: 0.35rem;
+  }
+
+  .pipeline ol {
+    gap: 0.35rem;
+  }
+
+  .pipeline li {
+    padding: 0.5rem 0.8rem;
+  }
+
+  .pipeline li:not(.active):not(.done) em {
+    display: none;
+  }
+
+  .stepNo {
+    width: 1.75rem;
+    height: 1.75rem;
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .wrap {
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+
+  .panel {
+    height: min(52vh, 440px);
+  }
+
+  .pipeline {
+    display: none;
+  }
+}

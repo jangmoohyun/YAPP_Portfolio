@@ -1,0 +1,92 @@
+/* INISOFT — light shell + 다크 콘솔 테마 (html[data-theme="dark"]) */
+
+.brand-shell {
+  position: relative;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  /* "하늘색 연한" 배경(그라데이션 + 블러 레이어) — 조금 더 선명하게 */
+  background:
+    radial-gradient(120% 120% at 12% 0%, #cfeeff 0%, #dbf3ff 24%, #eefaff 52%, #f7fdff 100%),
+    radial-gradient(90% 80% at 85% 10%, rgba(99, 102, 241, 0.18) 0%, rgba(99, 102, 241, 0) 60%),
+    linear-gradient(180deg, rgba(147, 197, 253, 0.52) 0%, rgba(191, 219, 254, 0.20) 52%, rgba(235, 252, 255, 0.96) 100%);
+  color: #0f172a;
+  overflow-x: hidden;
+  /* 대시보드에서 페이지(배경) 스크롤을 막고, 스크롤은 특정 컨테이너(.is-instance-scroll)만 허용 */
+  overflow-y: hidden;
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+}
+
+/* 배경 장식 레이어: 사진처럼 보이는 흐릿한 곡선/색감 */
+.brand-shell::before,
+.brand-shell::after {
+  content: "";
+  position: absolute;
+  inset: -35%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.brand-shell::before {
+  background:
+    radial-gradient(72% 56% at 10% 10%, rgba(56, 189, 248, 0.62) 0%, rgba(56, 189, 248, 0) 60%),
+    radial-gradient(66% 52% at 92% 18%, rgba(59, 130, 246, 0.46) 0%, rgba(59, 130, 246, 0) 62%),
+    radial-gradient(72% 62% at 35% 82%, rgba(125, 211, 252, 0.54) 0%, rgba(125, 211, 252, 0) 60%),
+    radial-gradient(55% 48% at 72% 70%, rgba(99, 102, 241, 0.22) 0%, rgba(99, 102, 241, 0) 60%);
+  filter: blur(22px);
+  opacity: 1;
+}
+
+.brand-shell::after {
+  /* 얇은 결(선) + 빛 번짐 */
+  background:
+    repeating-linear-gradient(
+      120deg,
+      rgba(56, 189, 248, 0.28) 0px,
+      rgba(56, 189, 248, 0.28) 1px,
+      transparent 1px,
+      transparent 12px
+    ),
+    repeating-linear-gradient(
+      60deg,
+      rgba(59, 130, 246, 0.26) 0px,
+      rgba(59, 130, 246, 0.26) 1px,
+      transparent 1px,
+      transparent 10px
+    ),
+    radial-gradient(55% 45% at 70% 55%, rgba(148, 163, 184, 0.36) 0%, rgba(148, 163, 184, 0) 60%);
+  filter: blur(20px);
+  opacity: 0.62;
+  transform: rotate(-6deg);
+}
+
+/* Large clipped corner wordmark */
+.brand-shell__watermark {
+  position: absolute;
+  right: max(-4vw, -48px);
+  bottom: max(-6vh, -64px);
+  font-size: clamp(140px, 22vw, 320px);
+  font-weight: 600;
+  letter-spacing: -0.05em;
+  line-height: 0.85;
+  color: #3a6f8f;
+  opacity: 0.09;
+  pointer-events: none;
+  z-index: 1;
+  user-select: none;
+  white-space: nowrap;
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.brand-shell__content {
+  position: relative;
+  z-index: 1;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}

@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0b1016"/>
+      <stop offset="55%" stop-color="#151c26"/>
+      <stop offset="100%" stop-color="#0f1620"/>
+    </linearGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1a2330"/>
+      <stop offset="100%" stop-color="#121922"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="760" rx="28" fill="url(#bg)"/>
+  <rect x="28" y="28" width="1144" height="64" rx="14" fill="#121820" stroke="#243041"/>
+  <circle cx="58" cy="60" r="8" fill="#ff5f57"/>
+  <circle cx="82" cy="60" r="8" fill="#febc2e"/>
+  <circle cx="106" cy="60" r="8" fill="#28c840"/>
+  <text x="140" y="66" fill="#8fa3bd" font-family="ui-sans-serif, system-ui" font-size="18" font-weight="700">INISOFT Remote Console</text>
+  <text x="1080" y="66" fill="#5d738f" font-family="ui-sans-serif, system-ui" font-size="14" text-anchor="end">ops@inisoft</text>
+
+  <rect x="28" y="112" width="360" height="620" rx="18" fill="url(#card)" stroke="#243041"/>
+  <text x="52" y="152" fill="#0099ff" font-family="ui-sans-serif, system-ui" font-size="15" font-weight="800">EVENTS</text>
+  <rect x="52" y="176" width="312" height="88" rx="12" fill="#182230" stroke="#2a3c52"/>
+  <text x="72" y="210" fill="#e8eef7" font-family="ui-sans-serif, system-ui" font-size="18" font-weight="700">LIVE-2026-0912</text>
+  <text x="72" y="236" fill="#7f95b0" font-family="ui-sans-serif, system-ui" font-size="13">Central · Encoder · Edge</text>
+  <rect x="52" y="280" width="312" height="72" rx="12" fill="#141c27" stroke="#243041"/>
+  <text x="72" y="312" fill="#c5d2e3" font-family="ui-sans-serif, system-ui" font-size="16" font-weight="600">PREP-2026-0901</text>
+  <text x="72" y="336" fill="#6d8199" font-family="ui-sans-serif, system-ui" font-size="13">Standby instances</text>
+
+  <rect x="408" y="112" width="764" height="620" rx="18" fill="#0a0e14" stroke="#243041"/>
+  <rect x="408" y="112" width="764" height="52" rx="18" fill="#121820"/>
+  <rect x="408" y="146" width="764" height="18" fill="#121820"/>
+  <text x="436" y="146" fill="#7ad1ff" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="14">INILIVE-Central-Console · ap-northeast-2</text>
+  <text x="436" y="210" fill="#3dd68c" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="15">ops@console:~$</text>
+  <text x="590" y="210" fill="#d7e3f2" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="15">ssm start-session --target i-0a12bcd</text>
+  <text x="436" y="248" fill="#9eb0c6" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="15">Starting session with SessionId: ops-0x91a2...</text>
+  <text x="436" y="286" fill="#9eb0c6" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="15">region: ap-northeast-2</text>
+  <text x="436" y="324" fill="#3dd68c" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="15">[connected]</text>
+  <text x="436" y="372" fill="#3dd68c" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="15">ubuntu@ip-10-0-12-8:~$</text>
+  <text x="670" y="372" fill="#d7e3f2" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="15">docker ps</text>
+  <text x="436" y="410" fill="#9eb0c6" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="14">CONTAINER ID   IMAGE              STATUS</text>
+  <text x="436" y="440" fill="#9eb0c6" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="14">a91f2c         nginx:alpine       Up 3 hours</text>
+  <text x="436" y="470" fill="#9eb0c6" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="14">bb12de         ttyd:latest        Up 3 hours</text>
+  <rect x="436" y="510" width="10" height="22" fill="#0099ff">
+    <animate attributeName="opacity" values="1;0;1" dur="1.1s" repeatCount="indefinite"/>
+  </rect>
+  <circle cx="1120" cy="680" r="36" fill="#0099ff" opacity="0.22"/>
+  <path d="M1120 658 L1136 680 L1120 702 L1104 680 Z" fill="#0099ff"/>
+</svg>
