@@ -250,7 +250,7 @@ export const projects: ProjectDetail[] = [
   },
   {
     id: "remote-console",
-    title: "INI Remote Console",
+    title: "Remote Console",
     summary:
       "아이돌 콘서트 라이브 송출 인턴십에서, 현장 SSH 제한을 넘는 웹 기반 EC2 접속 콘솔을 개인 프로젝트로 구축.",
     role: "인턴 · 개인 프로젝트",
