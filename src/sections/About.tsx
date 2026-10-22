@@ -40,13 +40,15 @@ export function About() {
                 <strong className={styles.emphasis}>하루한번</strong>
                 ’을{" "}
                 <strong className={styles.emphasis}>팀 리더</strong>로서
-                기획하고 개발하며, 일상 속 문제를{" "}
+                기획하고 개발하며,
+                <br />
+                일상 속 문제를{" "}
                 <strong className={styles.emphasis}>구체적인 기능</strong>으로
                 구현하고 팀원들과 함께{" "}
                 <strong className={styles.emphasis}>iOS 앱 출시</strong>까지
                 경험했습니다.
               </p>
-              <p className={styles.bio}>
+              <p className={`${styles.bio} ${styles.bioOneLine}`}>
                 개발 경험을 통해{" "}
                 <strong className={styles.emphasis}>기술적 제약</strong>을
                 이해하는 동시에, 서비스의{" "}

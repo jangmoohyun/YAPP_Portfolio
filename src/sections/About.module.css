@@ -47,8 +47,8 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: var(--space-4);
-  max-width: 38rem;
+  gap: var(--space-3);
+  max-width: min(52rem, 100%);
   padding: var(--space-2) 0 var(--space-2) var(--space-5);
 }
 
@@ -120,6 +120,10 @@
 
 .bioClose {
   color: var(--color-text);
+}
+
+.bioOneLine {
+  white-space: nowrap;
 }
 
 .emphasis {
@@ -231,6 +235,10 @@
   .introCopy {
     padding-left: var(--space-4);
     max-width: none;
+  }
+
+  .bioOneLine {
+    white-space: normal;
   }
 
   .achieveGrid {
