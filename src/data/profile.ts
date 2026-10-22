@@ -48,11 +48,11 @@ export const profile: Profile = {
     },
     {
       category: "Backend · Cloud",
-      items: ["AWS EC2", "AWS RDS", "AWS S3", "Amazon Cognito", "Nginx"],
+      items: ["NestJS", "Node.js", "Java", "Spring Boot", "AWS EC2", "AWS RDS", "AWS S3"],
     },
     {
       category: "AI · Data",
-      items: ["OpenAI API", "SQL", "Kakao Maps", "공공데이터 API"],
+      items: ["OpenAI API", "SQL"],
     },
     {
       category: "협업 툴",
